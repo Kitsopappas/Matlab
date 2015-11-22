@@ -26,14 +26,14 @@ function vicinity(img_path, n)
 * Open Matlab
 * Select an image(binary) and store it to a variable
 
->e.x. path = 'C:\Users\Χριστόδουλος\Desktop\sample img\panda.bmp' (optional)
+..* e.x. path = 'C:\Users\Χριστόδουλος\Desktop\sample img\panda.bmp' (optional)
 
 * Change to the directory with the file that contains our function
 * Use the function
 
-> e.x. vicinity(path, 4)
-> vicinity(path, 8)
-> vicinity(path, 222)
+..* e.x. vicinity(path, 4)
+..* vicinity(path, 8)
+..* vicinity(path, 222)
 
 * Grade my effort :)
 

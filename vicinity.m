@@ -1,7 +1,23 @@
-% Pappas Christodoylos
-% Ionian University
-% /. = end of block
+    % Pappas Christodoylos
+    % Ionian University
+    % /. = end of block
 
+%-------- How to use --------%
+
+    %vicinity.m
+    
+    % Open Matlab
+    % Select an image(binary) and store it to a variable
+    %  e.x. path = 'C:\Users\Χριστόδουλος\Desktop\sample img\panda.bmp' (optional)
+
+    % Change to the directory with the file that contains our function
+    % Use the function
+    %  e.x. vicinity(path, 4) 
+    %       vicinity(path, 8) 
+    %       vicinity(path, 222)
+    % Grade my effort :)
+
+%------ /. How to use --------%
 function vicinity(img_path, n)
  img = imread(img_path); %read the image
  [x,y]=size(img); %get the image size
@@ -15,8 +31,7 @@ function vicinity(img_path, n)
             if(img(i,j)==0)
     img_copy(i,j) = 0;
             end; 
-        end;
-        
+        end;  
  end;% /. copy the image
         
     switch n %check if the given number is correct
@@ -25,7 +40,7 @@ function vicinity(img_path, n)
              for c=1:(y)
                  if (r + 1 <= x || r - 1 >= x && c + 1 <= y || c-1 >= y) %avoid index out of bounds error
                     if (img(r,c)==0)
-                     %4 neighboor
+                     %4 neighbor
                         if (img(r,(c-1))== 0 && img((r+1),c) ==0  && img((r-1),c) ==0 && img(r,(c+1))==0)
                             img_copy(r,c) = 0.9; % the perfect woman is purple
                         end; % /. change colors
@@ -44,7 +59,7 @@ function vicinity(img_path, n)
              for c=1:(y)
                  if (r + 1 <= x || r - 1 >= x && c + 1 <= y || c-1 >= y) %avoid index out of bounds error
                     if (img(r,c)==0)
-                     %8 neighboor
+                     %8 neighbor
                          if (img((r-1),(c-1))==0 && img((r+1),(c-1))==0 && img((r+1),(c+1))==0 && img((r-1),(c+1))==0 && img(r,(c-1))== 0 && img((r+1),c) ==0  && img((r-1),c) ==0 && img(r,(c+1))==0)
 
                              img_copy(r,c) =0.9;
